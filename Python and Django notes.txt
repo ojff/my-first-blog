@@ -1,0 +1,59 @@
+1. open command prompt
+2. got to Path: d:\djangoplay
+3. start the virtualenv: myvenv\Scripts\activate
+
+
+
+stop: to stop virtualenv : myenv\scripts\deactivate
+
+
+creating a virtual environment:
+	python -m venv environmentname # lowercase, no spaces, accents or special chars 
+
+
+Python is case sensitive
+
+
+
+variables are not predeclared
+data types are per assignment
+lists = [item, item, item]
+dictionary = {key:object, key:object}
+
+adding to dictionaries
+dictionary[key] = object
+ex. dict["1"] = "test"
+deleting from dictionaries
+dict.pop[key]
+
+comparison operators:
+> < >= <= == !=
+
+boolean operators
+and or ^(xor) 
+
+CONDITIONAL
+
+if 1==2:
+	print(false)
+elif 2==1:
+	print(false)
+else:
+	print(true)
+
+
+LOOPING
+
+for var in list:
+	# do stuff
+
+for var in range(1, 6):
+	# do stuff. loops until n-1
+
+
+FUNCTIONS
+
+def function_name(params):
+	# statements
+
+
