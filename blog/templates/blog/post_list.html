@@ -1,17 +1,38 @@
+{% load staticfiles %}
 <html>
 	<head>
 		<title>qtip's blog</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
 	</head>
 	<body>
-		<div>
+		<div class='page-header'>
 			<h1><a href="">Qtip's Blog</a></h1>
 		</div>
-		<div>
-			{% for post in posts %}
-				<p>published: {{post.published_date}}</p>
-				<p><a href="">{{post.title}}</a></p>
-				<p>{{post.text|linebreaksbr}}</p>
-			{% endfor %}
+
+		<div class="content container">
+			<div class="row">
+				<div class="col-md-8">
+					{% for post in posts %}
+						<div class="post">
+							<div class="date">
+								<p>published: {{post.published_date}}</p>
+							</div>
+							<h1><a href="">{{post.title}}</a></h1>
+							<p>{{post.text|linebreaksbr}}</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
 		</div>
 
 	</body>
